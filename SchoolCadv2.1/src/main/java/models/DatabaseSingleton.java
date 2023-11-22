@@ -10,7 +10,9 @@ public class DatabaseSingleton {
     private static DatabaseSingleton instance;
 
     private String username = "root";
-    private String password = "1234";
+    private String password = "jojo1234";
+    // caso eu tenha commitado minha senha me perdoe, sou um imbecil :))
+    // (sim a senha é literalmente essa)
     private int port = 3306;
 
     private Connection connection;
