@@ -6,16 +6,20 @@ CREATE TABLE professor (
     id INT PRIMARY KEY,
     nome VARCHAR(128),
     registro VARCHAR(64),
-    materia VARCHAR(64)
+    materia VARCHAR(64),
+    id_turma INT,
+    FOREIGN KEY (id_turma) REFERENCES turma(id)
 );
 
 CREATE TABLE turma (
     id INT PRIMARY KEY,
     ano INT,
-    cod_sala VARCHAR(64)
+    cod_sala VARCHAR(64),
+    id_professor INT,
+    FOREIGN KEY (id_professor) REFERENCES professor(id)
 );
 
-CREATE TABLE empresa_estagio (
+CREATE TABLE empresa (
     id INT PRIMARY KEY,
     nome VARCHAR(128),
     registro VARCHAR(64),

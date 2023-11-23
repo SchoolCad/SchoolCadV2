@@ -10,7 +10,7 @@ public class DatabaseSingleton {
     private static DatabaseSingleton instance;
 
     private String username = "root";
-    private String password = "Vi85745623022007%00";
+    private String password = "";
     private int port = 3306;
 
     private Connection connection;

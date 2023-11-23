@@ -25,14 +25,14 @@ public class ListEmpresas extends JFrame{
 
         try {
             DatabaseSingleton singleton = DatabaseSingleton.getInstance();
-            ResultSet countCompanyRows = singleton.executeSelect("SELECT COUNT(*) AS total FROM empresa_estagio");
+            ResultSet countCompanyRows = singleton.executeSelect("SELECT COUNT(*) AS total FROM empresa");
 
             countCompanyRows.next();
             int rows = countCompanyRows.getInt("total");
             Object[] tableItens = new Object[rows];
 
 
-            ResultSet empresas = singleton.executeSelect("SELECT * FROM empresa_estagio");
+            ResultSet empresas = singleton.executeSelect("SELECT * FROM empresa");
 
             int index = 0;
             while (empresas.next()) {
