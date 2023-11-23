@@ -34,7 +34,7 @@ CREATE TABLE aluno (
     id_turma INT,
     id_estagio INT,
     FOREIGN KEY (id_turma) REFERENCES turma(id),
-    FOREIGN KEY (id_estagio) REFERENCES empresa_estagio(id)
+    FOREIGN KEY (id_estagio) REFERENCES empresa(id)
 );
 
 CREATE TABLE professor_turma (
