@@ -51,6 +51,8 @@ public class ListAluno extends JFrame {
 
             String[] columnNames = {"Id", "Nome", "Registro", "Serie", "Turma", "Estágio"};
 
+            System.out.println(tableModel);
+
             tableModel = new TableAdapter(columnNames, tableItens);
             this.table.setModel(tableModel);
 

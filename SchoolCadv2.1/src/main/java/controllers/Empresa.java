@@ -1,10 +1,10 @@
 package controllers;
 
-import views.MenuAluno;
+import views.MenuEmpresa;
 
-public class Aluno {
+public class Empresa {
 
     public static void main(String[] args) {
-        new MenuAluno();
+        new MenuEmpresa();
     }
 }
