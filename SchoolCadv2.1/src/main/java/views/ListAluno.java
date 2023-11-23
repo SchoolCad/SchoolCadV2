@@ -1,10 +1,13 @@
 package views;
 
 import adapters.TableAdapter;
+import models.Aluno;
 import models.DatabaseSingleton;
 
 import javax.swing.*;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Vector;
 
 public class ListAluno extends JFrame {
@@ -32,38 +35,33 @@ public class ListAluno extends JFrame {
             int rows = countAlunosRows.getInt("total");
             Object[] tableItens = new Object[rows];
 
-
-            ResultSet alunos = singleton.executeSelect("SELECT * FROM aluno");
-
             int index = 0;
-            while (alunos.next()) {
-                int id = alunos.getInt("id");
-                String nome = alunos.getString("nome");
-                String registro = alunos.getString("registro");
-                int serie = alunos.getInt("serie");
-                int idTurma = alunos.getInt("id_turma");
-                int idEstagio = alunos.getInt("id_estagio");
-
-
-                tableItens[index] = new Object[]{id, nome, registro, serie, idTurma, idEstagio};
-                index++;
-            }
-
             String[] columnNames = {"Id", "Nome", "Registro", "Serie", "Turma", "Estágio"};
 
-            System.out.println(tableModel);
+            List<Aluno> listaAlunos = new ArrayList<>();
+            ResultSet alunos = singleton.executeSelect("SELECT * FROM aluno");
+            while (alunos.next()) {
+                Aluno aluno = new Aluno(alunos);
+                listaAlunos.add(aluno);
+
+                tableItens[index] = new Object[]{
+                        aluno.getId(),
+                        aluno.getNome(),
+                        aluno.getRegistro(),
+                        aluno.getSerie(),
+                        aluno.getTurma(),
+                        aluno.getEstagios()
+                };
+                index++;
+            }
 
             tableModel = new TableAdapter(columnNames, tableItens);
             this.table.setModel(tableModel);
 
         } catch (Exception e) {
-
             JOptionPane.showMessageDialog(null, e.getMessage(), "Error", 2);
-
         }
 
 
-
     }
-
 }
