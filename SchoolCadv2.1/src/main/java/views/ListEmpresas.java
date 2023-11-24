@@ -4,6 +4,8 @@ import adapters.TableAdapter;
 import models.DatabaseSingleton;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 
 
@@ -11,6 +13,7 @@ public class ListEmpresas extends JFrame{
     private JLabel titleList;
     private JTable tableList;
     private JPanel ListEmpresas;
+    private JButton returnToMenu;
 
     private TableAdapter tableModel;
 
@@ -54,5 +57,15 @@ public class ListEmpresas extends JFrame{
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage(), "Error", 2);
         }
+        returnToMenu.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                redirecionarParaMenuEmpresa();
+            }
+        });
+    }
+    private void redirecionarParaMenuEmpresa() {
+        setVisible(false);
+        new MenuEmpresa();
     }
 }
