@@ -22,7 +22,7 @@ public class CadastrarEmpresa extends JFrame{
 
     private void checkFields() {
         boolean fieldsCompleted = !nomeField.getText().isEmpty() &&
-                !registroField.getText().isEmpty() &&
+                isCnpjValido(registroField.getText()) &&
                 !areaField.getText().isEmpty();
 
         submitButton.setEnabled(fieldsCompleted);
@@ -105,5 +105,10 @@ public class CadastrarEmpresa extends JFrame{
     private void redirecionarParaMenuEmpresa() {
         setVisible(false);
         new MenuEmpresa();
+    }
+
+    private boolean isCnpjValido(String cnpj) {
+        // Utiliza uma expressão regular para verificar o formato do CNPJ
+        return cnpj.matches("\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}-\\d{2}");
     }
 }
