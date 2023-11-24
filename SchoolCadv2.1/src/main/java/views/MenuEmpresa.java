@@ -28,5 +28,13 @@ public class MenuEmpresa extends JFrame{
                 new ListEmpresas();
             }
         });
+        postCompany.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+
+                new CadastrarEmpresa();
+            }
+        });
     }
 }

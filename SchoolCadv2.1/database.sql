@@ -1,33 +1,30 @@
+DROP DATABASE IF EXISTS escola;
 CREATE DATABASE escola;
 
 USE escola;
 
 CREATE TABLE professor (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY auto_increment,
     nome VARCHAR(128),
     registro VARCHAR(64),
-    materia VARCHAR(64),
-    id_turma INT,
-    FOREIGN KEY (id_turma) REFERENCES turma(id)
+    materia VARCHAR(64)
 );
 
 CREATE TABLE turma (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY auto_increment,
     ano INT,
-    cod_sala VARCHAR(64),
-    id_professor INT,
-    FOREIGN KEY (id_professor) REFERENCES professor(id)
+    cod_sala VARCHAR(64)
 );
 
-CREATE TABLE empresa (
-    id INT PRIMARY KEY,
+CREATE TABLE empresa	 (
+    id INT PRIMARY KEY auto_increment,
     nome VARCHAR(128),
     registro VARCHAR(64),
     area VARCHAR(64)
 );
 
 CREATE TABLE aluno (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY auto_increment,
     nome VARCHAR(128),
     registro VARCHAR(64),
     serie INT,
