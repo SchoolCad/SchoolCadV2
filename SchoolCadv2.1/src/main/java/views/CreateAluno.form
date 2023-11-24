@@ -23,6 +23,7 @@
           </grid>
         </constraints>
         <properties>
+          <background color="-1"/>
           <horizontalAlignment value="0"/>
           <text value=""/>
           <toolTipText value="Insira o nome do aluno"/>
@@ -35,6 +36,7 @@
           </grid>
         </constraints>
         <properties>
+          <background color="-1"/>
           <horizontalAlignment value="0"/>
           <text value=""/>
           <toolTipText value="Insira o registro do aluno"/>
@@ -45,6 +47,8 @@
           <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-1"/>
+          <model/>
           <toolTipText value="Insira a turma do aluno"/>
         </properties>
       </component>
@@ -53,6 +57,8 @@
           <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-1"/>
+          <editable value="false"/>
           <model/>
           <toolTipText value="Insira a qual estágio o aluno pertence"/>
         </properties>

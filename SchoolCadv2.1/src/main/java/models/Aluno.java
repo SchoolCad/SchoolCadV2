@@ -13,7 +13,7 @@ public class Aluno {
 
     // Construtores, getters e setters
 
-    public Aluno(int id, String nome, String registro, int serie, String Turma, String Estagios) {
+    public Aluno(int id, String nome, String registro, String Turma, String Estagios) {
         this.id = id;
         this.nome = nome;
         this.registro = registro;
@@ -21,7 +21,22 @@ public class Aluno {
         this.Estagios = Estagios;
     }
 
-    // Segundo construtor que aceita um ResultSet
+    public Aluno(String nome, String registro, int id_turma, int id_estagio) {
+        try {
+            DatabaseSingleton singleton = DatabaseSingleton.getInstance();
+            String query = String.format(
+                    "INSERT INTO aluno (nome, registro, id_turma, id_estagio) VALUES ('%s', '%s', %d, %d)",
+                    nome, registro, id_turma, id_estagio
+            );
+            int insert = singleton.executeDML(query);
+            JOptionPane.showMessageDialog(null, "Aluno " + nome +" cadastrado!");
+
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Error", 2);
+        }
+    }
+
     public Aluno(ResultSet resultSet) throws SQLException {
         try {
             DatabaseSingleton singleton = DatabaseSingleton.getInstance();

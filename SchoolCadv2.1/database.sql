@@ -4,21 +4,21 @@ CREATE DATABASE escola;
 USE escola;
 
 CREATE TABLE empresa (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(128),
     registro VARCHAR(64),
     area VARCHAR(64)
 );
 
 CREATE TABLE turma (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     ano varchar(10),
     cod_sala VARCHAR(64),
     id_professor INT
 );
 
 CREATE TABLE professor (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(128),
     registro VARCHAR(64),
     materia VARCHAR(64),
@@ -27,7 +27,7 @@ CREATE TABLE professor (
 );
 
 CREATE TABLE aluno (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(128),
     registro VARCHAR(64),
     id_turma INT,
