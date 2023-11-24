@@ -1,5 +1,6 @@
 package models;
 
+import javax.swing.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -7,7 +8,6 @@ public class Aluno {
     private int id;
     private String nome;
     private String registro;
-    private int serie;
     private String Turma;
     private String Estagios;
 
@@ -17,22 +17,33 @@ public class Aluno {
         this.id = id;
         this.nome = nome;
         this.registro = registro;
-        this.serie = serie;
         this.Turma = Turma;
         this.Estagios = Estagios;
     }
 
     // Segundo construtor que aceita um ResultSet
     public Aluno(ResultSet resultSet) throws SQLException {
-        this.id = resultSet.getInt("id");
-        this.nome = resultSet.getString("nome");
-        this.registro = resultSet.getString("registro");
-        this.serie = resultSet.getInt("serie");
+        try {
+            DatabaseSingleton singleton = DatabaseSingleton.getInstance();
 
-        //TODO: o certo é fazer com que ele busque na table
-        //isso aq é gambs
-        this.Turma = Integer.toString(resultSet.getInt("id_turma"));
-        this.Estagios = Integer.toString(resultSet.getInt("id_estagio"));
+            this.id = resultSet.getInt("id");
+            this.nome = resultSet.getString("nome");
+            this.registro = resultSet.getString("registro");
+
+
+            int id_turma = resultSet.getInt("id_turma");
+            ResultSet turma = singleton.executeSelect("SELECT ano FROM turma WHERE id=" + id_turma);
+            turma.next();
+            this.Turma = turma.getString("ano");
+
+            int id_estagio = resultSet.getInt("id_estagio");
+            ResultSet estagio = singleton.executeSelect("SELECT nome FROM empresa WHERE id=" + id_estagio);
+            estagio.next();
+            this.Estagios = estagio.getString("nome");
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Error", 2);
+        }
     }
 
     public void setId(int id) {
@@ -47,40 +58,32 @@ public class Aluno {
         this.registro = registro;
     }
 
-    public void setSerie(int serie) {
-        this.serie = serie;
-    }
-
     public void setTurma(String turma) {
-        Turma = turma;
+        this.Turma = turma;
     }
 
     public void setEstagios(String estagios) {
-        Estagios = estagios;
+        this.Estagios = estagios;
     }
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public String getRegistro() {
-        return registro;
-    }
-
-    public int getSerie() {
-        return serie;
+        return this.registro;
     }
 
     public String getTurma() {
-        return Turma;
+        return this.Turma;
     }
 
     public String getEstagios() {
-        return Estagios;
+        return this.Estagios;
     }
 
 }

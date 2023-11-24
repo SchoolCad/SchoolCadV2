@@ -22,4 +22,9 @@ public class TableAdapter extends DefaultTableModel {
         super.removeRow(row);
     }
 
+    @Override
+    public boolean isCellEditable(int row, int column) {
+        return false;
+    }
+
 }

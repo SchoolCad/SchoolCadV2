@@ -29,5 +29,16 @@ public class MenuAluno extends JFrame {
                 new ListAluno();
             }
         });
+
+
+        add.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+
+                new CreateAluno();
+            }
+        });
+
     }
 }
