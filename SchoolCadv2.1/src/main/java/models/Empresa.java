@@ -19,6 +19,13 @@ public class Empresa {
         this.area = area;
     }
 
+    public Empresa(int id, String nome, String registro, String area) {
+        this.id = id;
+        this.nome = nome;
+        this.registro = registro;
+        this.area = area;
+    }
+
     public int getId() {
         return id;
     }
