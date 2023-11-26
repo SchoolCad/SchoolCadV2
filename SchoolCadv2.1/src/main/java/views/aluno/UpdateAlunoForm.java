@@ -28,7 +28,7 @@ public class UpdateAlunoForm extends JFrame {
     public UpdateAlunoForm(Aluno alunoValues){
 
         setContentPane(UpdateAluno);
-        setTitle("Menu Aluno");
+        setTitle("Atualizar Aluno");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280,720);
         setLocationRelativeTo(null);

@@ -29,7 +29,7 @@ public class CreateAluno extends JFrame {
     public CreateAluno() {
 
         setContentPane(CreateAluno);
-        setTitle("Menu Aluno");
+        setTitle("Cadastrar Aluno");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280,720);
         setLocationRelativeTo(null);

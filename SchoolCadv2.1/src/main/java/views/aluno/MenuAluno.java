@@ -11,6 +11,7 @@ public class MenuAluno extends JFrame {
     private JButton list;
     private JButton add;
     private JButton update;
+    private JButton delete;
 
     public MenuAluno() {
         setContentPane(MenuAluno);
@@ -43,6 +44,15 @@ public class MenuAluno extends JFrame {
                 setVisible(false);
 
                 new UpdateAlunoList();
+            }
+        });
+
+        delete.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+
+                new DeleteAluno();
             }
         });
 
