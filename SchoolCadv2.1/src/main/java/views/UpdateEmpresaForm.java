@@ -98,7 +98,7 @@ public class UpdateEmpresaForm extends  JFrame{
                     if (rowsAffected > 0) {
                         exibirMensagem("Empresa alterada com sucesso!");
                     } else {
-                        exibirMensagem("Falha ao alterada a empresa.");
+                        exibirMensagem("Falha ao alterar a empresa.");
                     }
                     redirecionarParaMenuEmpresa();
                 } catch (SQLException ex) {
@@ -122,7 +122,7 @@ public class UpdateEmpresaForm extends  JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                new UpdateEmpresaTable();
+                new UpdateEmpresaTable(true);
             }
         });
     }

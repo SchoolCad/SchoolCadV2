@@ -41,7 +41,15 @@ public class MenuEmpresa extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
 
-                new UpdateEmpresaTable();
+                new UpdateEmpresaTable(true);
+            }
+        });
+        deleteCompany.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+
+                new UpdateEmpresaTable(false);
             }
         });
     }

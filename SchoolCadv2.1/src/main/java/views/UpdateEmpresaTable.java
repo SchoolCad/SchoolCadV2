@@ -19,13 +19,17 @@ public class UpdateEmpresaTable extends JFrame{
 
     private Empresa initialValues;
 
-    public UpdateEmpresaTable() {
+    public UpdateEmpresaTable(boolean isUpdate) {
         setContentPane(UpdateEmpresaTable);
         setTitle("Selecionar Empresa");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280,720);
         setLocationRelativeTo(null);
+
+        if(!isUpdate) {
+
+        }
 
         selectCompany.setEnabled(false);
 
@@ -85,7 +89,12 @@ public class UpdateEmpresaTable extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                new UpdateEmpresaForm(initialValues);
+
+                if(isUpdate) {
+                    new UpdateEmpresaForm(initialValues);
+                } else {
+                    new DeleteEmpresaForm(initialValues);
+                }
             }
         });
 
