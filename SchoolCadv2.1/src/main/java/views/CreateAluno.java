@@ -24,6 +24,7 @@ public class CreateAluno extends JFrame {
     private JLabel internshipLabel;
     private JButton add;
     private JButton back;
+    private JLabel registryWarning;
 
     public CreateAluno() {
 
@@ -34,6 +35,7 @@ public class CreateAluno extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
 
+        registryWarning.setVisible(false);
         add.setEnabled(false);
         Map<Integer, String> classroomMap = new HashMap<>();
         Map<Integer, String> internshipMap = new HashMap<>();
@@ -92,14 +94,13 @@ public class CreateAluno extends JFrame {
                 Aluno novoAluno = new Aluno(
                         name.getText(),
                         registry.getText(),
-                        getKeyByValue(classroomMap, (String) classroom.getSelectedItem()) < 0 ?
-                                null :
-                                getKeyByValue(classroomMap, (String) classroom.getSelectedItem())
-                        ,
-                        getKeyByValue(internshipMap, (String)internship.getSelectedItem()) < 0 ?
-                                null :
-                                getKeyByValue(internshipMap, (String)internship.getSelectedItem())
-                        );
+                        getKeyByValue(classroomMap, (String) classroom.getSelectedItem()),
+                        getKeyByValue(internshipMap, (String)internship.getSelectedItem())
+                    );
+                name.setText("");
+                registry.setText("");
+                classroom.setSelectedIndex(-1);
+                internship.setSelectedIndex(-1);
             }
         });
         back.addActionListener(new ActionListener() {
@@ -153,12 +154,24 @@ public class CreateAluno extends JFrame {
 
     }
 
+    private boolean isRegistryValid () {
+        if(!registry.getText().isEmpty()){
+            if(registry.getText().length() != 9){
+                registryWarning.setVisible(true);
+                return false;
+            } else {
+                registryWarning.setVisible(false);
+                return true;
+            }
+        }
+        return false;
+    }
+
     private void isInputsValid () {
 
         if (
+                !isRegistryValid() ||
                 name.getText().trim().isEmpty() ||
-                        //TODO: verify if is a valid registry
-                registry.getText().trim().isEmpty() ||
                 classroom.getSelectedIndex() == 0 ||
                 internship.getSelectedIndex() == 0
         ) {
