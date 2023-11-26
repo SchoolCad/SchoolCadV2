@@ -29,7 +29,7 @@ CREATE TABLE professor (
 CREATE TABLE aluno (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(128),
-    registro VARCHAR(64),
+    registro VARCHAR(64) UNIQUE,
     id_turma INT,
     id_estagio INT,
     FOREIGN KEY (id_turma) REFERENCES turma(id),
