@@ -1,37 +1,30 @@
-package views;
+package views.empresa;
 
 import adapters.TableAdapter;
 import models.DatabaseSingleton;
-import models.Empresa;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 
-public class UpdateEmpresaTable extends JFrame{
+
+public class ListEmpresas extends JFrame{
+    private JLabel titleList;
     private JTable tableList;
-    private JPanel UpdateEmpresaTable;
+    private JPanel ListEmpresas;
     private JButton returnToMenu;
-    private JButton selectCompany;
 
     private TableAdapter tableModel;
 
-    private Empresa initialValues;
-
-    public UpdateEmpresaTable(boolean isUpdate) {
-        setContentPane(UpdateEmpresaTable);
-        setTitle("Selecionar Empresa");
+    public ListEmpresas() {
+        setContentPane(ListEmpresas);
+        setTitle("Lista de Empresas");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(1280,720);
+        setSize(300,300);
         setLocationRelativeTo(null);
-
-        if(!isUpdate) {
-
-        }
-
-        selectCompany.setEnabled(false);
+        setVisible(true);
 
         try {
             DatabaseSingleton singleton = DatabaseSingleton.getInstance();
@@ -70,37 +63,7 @@ public class UpdateEmpresaTable extends JFrame{
                 redirecionarParaMenuEmpresa();
             }
         });
-
-        tableList.getSelectionModel().addListSelectionListener(e -> {
-            if (!e.getValueIsAdjusting()) {
-                int selectedRow = tableList.getSelectedRow();
-
-                int id = (int) tableList.getValueAt(selectedRow, 0);
-                String nome = (String) tableList.getValueAt(selectedRow, 1);
-                String registro = (String) tableList.getValueAt(selectedRow, 2);
-                String area = (String) tableList.getValueAt(selectedRow, 3);
-
-                initialValues = new Empresa(id, nome, registro, area);
-
-                selectCompany.setEnabled(true);
-            }
-        });
-        selectCompany.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                setVisible(false);
-
-                if(isUpdate) {
-                    new UpdateEmpresaForm(initialValues);
-                } else {
-                    new DeleteEmpresaForm(initialValues);
-                }
-            }
-        });
-
-        setVisible(true);
     }
-
     private void redirecionarParaMenuEmpresa() {
         setVisible(false);
         new MenuEmpresa();

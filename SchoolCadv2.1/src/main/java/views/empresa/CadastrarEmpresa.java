@@ -1,4 +1,4 @@
-package views;
+package views.empresa;
 
 import models.DatabaseSingleton;
 
@@ -31,7 +31,7 @@ public class CadastrarEmpresa extends JFrame{
         setContentPane(CadastrarEmpresa);
         setTitle("Cadastro de Empresa");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(1280,720);
+        setSize(300,300);
         setLocationRelativeTo(null);
         submitButton.setEnabled(false);
         setVisible(true);
