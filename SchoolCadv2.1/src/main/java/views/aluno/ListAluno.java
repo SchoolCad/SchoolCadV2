@@ -1,4 +1,4 @@
-package views.aluno.UpdateAluno;
+package views.aluno;
 
 import adapters.TableAdapter;
 import models.Aluno;
