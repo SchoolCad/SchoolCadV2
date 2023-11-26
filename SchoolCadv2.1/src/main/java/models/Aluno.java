@@ -26,7 +26,7 @@ public class Aluno {
             DatabaseSingleton singleton = DatabaseSingleton.getInstance();
             String query = String.format(
                     "INSERT INTO aluno (nome, registro, id_turma, id_estagio) VALUES ('%s', '%s', %d, %d)",
-                    nome, registro, id_turma, id_estagio
+                    nome, registro, id_turma < 0 ? null : id_turma, id_estagio < 0 ? null : id_estagio
             );
             int insert = singleton.executeDML(query);
             JOptionPane.showMessageDialog(null, "Aluno " + nome +" cadastrado!");
@@ -48,13 +48,19 @@ public class Aluno {
 
             int id_turma = resultSet.getInt("id_turma");
             ResultSet turma = singleton.executeSelect("SELECT ano FROM turma WHERE id=" + id_turma);
-            turma.next();
-            this.Turma = turma.getString("ano");
+            if(turma.next()) {
+                this.Turma = turma.getString("ano");
+            } else {
+                this.Turma = "Nenhuma";
+            }
 
             int id_estagio = resultSet.getInt("id_estagio");
             ResultSet estagio = singleton.executeSelect("SELECT nome FROM empresa WHERE id=" + id_estagio);
-            estagio.next();
-            this.Estagios = estagio.getString("nome");
+            if(estagio.next()) {
+                this.Estagios = estagio.getString("nome");
+            } else {
+                this.Estagios = "Nenhum";
+            }
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage(), "Error", 2);
