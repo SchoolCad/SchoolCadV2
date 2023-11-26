@@ -1,9 +1,8 @@
-package views.UpdateAluno;
+package views.aluno.UpdateAluno;
 
 import adapters.TableAdapter;
 import models.Aluno;
 import models.DatabaseSingleton;
-import views.MenuAluno;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;

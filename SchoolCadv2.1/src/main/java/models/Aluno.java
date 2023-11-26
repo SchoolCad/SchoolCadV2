@@ -91,8 +91,8 @@ public class Aluno {
 
 
             String updateQuery = String.format(
-                    "UPDATE aluno SET nome='%s', id_turma=%d, id_estagio=%d WHERE registro='%s'",
-                    nome, id_turma < 0 ? null : id_turma, id_estagio < 0 ? null : id_estagio, registro
+                    "UPDATE aluno SET nome='%s', registro='%s', id_turma=%d, id_estagio=%d WHERE id='%d'",
+                    nome, registro,id_turma < 0 ? null : id_turma, id_estagio < 0 ? null : id_estagio, this.id
             );
             int update = singleton.executeDML(updateQuery);
             JOptionPane.showMessageDialog(null, "Aluno " + nome +" alterado!");

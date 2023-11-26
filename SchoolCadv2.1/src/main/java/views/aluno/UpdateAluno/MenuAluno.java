@@ -1,6 +1,4 @@
-package views;
-
-import views.UpdateAluno.UpdateAlunoList;
+package views.aluno.UpdateAluno;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

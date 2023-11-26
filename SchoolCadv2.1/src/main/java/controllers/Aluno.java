@@ -1,6 +1,6 @@
 package controllers;
 
-import views.MenuAluno;
+import views.aluno.UpdateAluno.MenuAluno;
 
 public class Aluno {
 

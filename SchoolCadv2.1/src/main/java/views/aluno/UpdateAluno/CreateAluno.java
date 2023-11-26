@@ -1,4 +1,4 @@
-package views;
+package views.aluno.UpdateAluno;
 
 import models.Aluno;
 import models.DatabaseSingleton;

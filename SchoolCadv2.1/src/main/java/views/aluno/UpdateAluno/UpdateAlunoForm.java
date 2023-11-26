@@ -1,8 +1,7 @@
-package views.UpdateAluno;
+package views.aluno.UpdateAluno;
 
 import models.Aluno;
 import models.DatabaseSingleton;
-import views.MenuAluno;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
