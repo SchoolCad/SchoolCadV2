@@ -26,9 +26,8 @@ public class MenuProfessor extends JFrame {
         list.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //setVisible(false);
                 dispose();
-                //new ListAluno();
+                new ListProfessor();
             }
         });
 

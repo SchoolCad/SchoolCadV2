@@ -1,9 +1,10 @@
 package controllers;
 
-import views.*;
+import views.Professor.MenuProfessor;
+
 public class Main {
 
     public static void main(String[] args) {
-        new MenuPrincipal();
+        new MenuProfessor();
     }
 }
