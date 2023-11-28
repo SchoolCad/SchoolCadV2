@@ -35,7 +35,6 @@ public class MenuProfessor extends JFrame {
         add.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //setVisible(false);
                 dispose();
                 new CreateProfessor();
             }
@@ -45,6 +44,7 @@ public class MenuProfessor extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
+                new UpdateProfessorList();
             }
         });
 
@@ -52,6 +52,7 @@ public class MenuProfessor extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
+                new DeleteProfessor();
             }
         });
     }

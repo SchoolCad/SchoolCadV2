@@ -31,7 +31,7 @@ public class Professor {
             DatabaseSingleton singleton = DatabaseSingleton.getInstance();
             String query = String.format(
                     "INSERT INTO professor (nome, registro, materia, id_turma) VALUES ('%s', '%s', '%s', '%d')",
-                    nome, registro, materia, turma < 0 ? null : turma
+                    nome, registro, materia, turma
             );
             int insert = singleton.executeDML(query);
             JOptionPane.showMessageDialog(null, "Professor " + nome +" cadastrado!");
@@ -62,6 +62,23 @@ public class Professor {
     }
 
     //methods
+
+    public void updateProfessor (String nome, String registro, String materia, int turma) {
+        try {
+            DatabaseSingleton singleton = DatabaseSingleton.getInstance();
+
+            String updateQuery = String.format(
+                    "UPDATE professor SET nome='%s', registro='%s', id_turma=%d, materia='%s' WHERE id='%d'",
+                    nome, registro, turma, materia, this.id
+            );
+            int update = singleton.executeDML(updateQuery);
+            JOptionPane.showMessageDialog(null, "Professor " + nome +" alterado!");
+
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Error", 2);
+        }
+    }
 
     //getters and setters
 

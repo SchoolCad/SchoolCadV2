@@ -12,24 +12,23 @@ import java.sql.ResultSet;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CreateProfessor extends JFrame {
+public class UpdateProfessorForm extends JFrame {
     private JTextField name;
     private JTextField registry;
     private JTextField subject;
-    private JComboBox classroom;
-    private JButton insert;
+    private JButton update;
+    private JButton cancel;
+    private JLabel registrywarning;
     private JLabel labelname;
     private JLabel labelregistry;
-    private JLabel registrywarning;
     private JLabel labelsubject;
-    private JLabel labelclass;
-    private JButton back;
-    private JPanel CreateProfessor;
+    private JComboBox classroom;
+    private JPanel UpdateProfessorForm;
 
     private boolean checkForms () {
         boolean x = isRegistryValid() && !name.getText().isEmpty() &&
                 !subject.getText().isEmpty() && classroom.getSelectedIndex() != 0;
-        insert.setEnabled(x);
+        update.setEnabled(x);
         return x;
     }
 
@@ -69,9 +68,9 @@ public class CreateProfessor extends JFrame {
 
     }
 
-    public CreateProfessor () {
-        setContentPane(CreateProfessor);
-        setTitle("Cadastro de Professor");
+    public UpdateProfessorForm (Professor professor) {
+        setContentPane(UpdateProfessorForm);
+        setTitle("Atualizar Professor");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280,720);
@@ -80,7 +79,12 @@ public class CreateProfessor extends JFrame {
 
         Map<Integer, String> classroomMap = new HashMap<>();
         comboBoxSetup(classroomMap);
-        insert.setEnabled(false);
+        update.setEnabled(false);
+
+        this.name.setText(professor.getNome());
+        this.registry.setText(professor.getRegistro());
+        this.subject.setText(professor.getMateria());
+        this.classroom.setSelectedIndex(professor.getId_turma());
 
         DocumentListener documentListener = new DocumentListener() {
             @Override
@@ -112,20 +116,20 @@ public class CreateProfessor extends JFrame {
             }
         });
 
-        insert.addActionListener(new ActionListener() {
+        update.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new Professor(name.getText(), registry.getText(), subject.getText(), classroom.getSelectedIndex());
+                professor.updateProfessor(name.getText(), registry.getText(), subject.getText(), classroom.getSelectedIndex());
                 dispose();
                 new MenuProfessor();
             }
         });
 
-        back.addActionListener(new ActionListener() {
+        cancel.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                new MenuProfessor();
+                new UpdateProfessorList();
             }
         });
     }
