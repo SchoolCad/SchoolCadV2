@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
  public class MenuTurma extends JFrame{
-    private JPanel MenuTurma;
+    private JPanel MenuTurm;
     private JButton createTurmaBtn;
     private JButton readTurmaBtn;
     private JButton updateTurmaBtn;
@@ -19,7 +19,7 @@ import java.awt.event.ActionListener;
      public MenuTurma(){
         setTitle("Menu das turmas");
 
-        setContentPane(MenuTurma);
+        setContentPane(MenuTurm);
         setLocationRelativeTo(null);
         setSize(300, 300);
         setMinimumSize(new Dimension(300,300));
