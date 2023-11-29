@@ -1,7 +1,8 @@
-DROP DATABASE escola;
+DROP DATABASE IF EXISTS escola;
 CREATE DATABASE escola;
 
 USE escola;
+
 
 CREATE TABLE empresa (
     id INT PRIMARY KEY AUTO_INCREMENT,

@@ -1,4 +1,4 @@
-package views;
+package views.empresa;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -17,7 +17,7 @@ public class MenuEmpresa extends JFrame{
         setTitle("Menu Empresa");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(1280,720);
+        setSize(300,300);
         setLocationRelativeTo(null);
         setVisible(true);
         listCompany.addActionListener(new ActionListener() {
@@ -26,6 +26,30 @@ public class MenuEmpresa extends JFrame{
                 setVisible(false);
 
                 new ListEmpresas();
+            }
+        });
+        postCompany.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+
+                new CadastrarEmpresa();
+            }
+        });
+        updateCompany.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+
+                new UpdateEmpresaTable(true);
+            }
+        });
+        deleteCompany.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+
+                new UpdateEmpresaTable(false);
             }
         });
     }

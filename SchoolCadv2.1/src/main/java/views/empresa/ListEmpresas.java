@@ -1,9 +1,11 @@
-package views;
+package views.empresa;
 
 import adapters.TableAdapter;
 import models.DatabaseSingleton;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 
 
@@ -11,15 +13,16 @@ public class ListEmpresas extends JFrame{
     private JLabel titleList;
     private JTable tableList;
     private JPanel ListEmpresas;
+    private JButton returnToMenu;
 
     private TableAdapter tableModel;
 
     public ListEmpresas() {
         setContentPane(ListEmpresas);
-        setTitle("Lista de Alunos");
+        setTitle("Lista de Empresas");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(1280,720);
+        setSize(300,300);
         setLocationRelativeTo(null);
         setVisible(true);
 
@@ -54,5 +57,15 @@ public class ListEmpresas extends JFrame{
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage(), "Error", 2);
         }
+        returnToMenu.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                redirecionarParaMenuEmpresa();
+            }
+        });
+    }
+    private void redirecionarParaMenuEmpresa() {
+        setVisible(false);
+        new MenuEmpresa();
     }
 }
