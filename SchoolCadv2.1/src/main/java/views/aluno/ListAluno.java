@@ -27,7 +27,6 @@ public class ListAluno extends JFrame {
         setSize(1280,720);
         setLocationRelativeTo(null);
         setVisible(true);
-//        ListAluno.add(new JScrollPane(table));
 
         try {
 

@@ -3,9 +3,6 @@ package views.empresa;
 import adapters.TableAdapter;
 import models.DatabaseSingleton;
 import models.Empresa;
-import views.empresa.DeleteEmpresaForm;
-import views.empresa.MenuEmpresa;
-import views.empresa.UpdateEmpresaForm;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

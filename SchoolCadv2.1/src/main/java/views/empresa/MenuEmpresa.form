@@ -8,7 +8,7 @@
     <properties/>
     <border type="none"/>
     <children>
-      <component id="fec05" class="javax.swing.JLabel" binding="titleMenu">
+      <component id="1c54b" class="javax.swing.JLabel" binding="titleMenu">
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -16,15 +16,7 @@
           <text value="O que você deseja fazer em empresas?"/>
         </properties>
       </component>
-      <component id="5728e" class="javax.swing.JButton" binding="deleteCompany">
-        <constraints>
-          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Deletar uma Empresa"/>
-        </properties>
-      </component>
-      <component id="83682" class="javax.swing.JButton" binding="listCompany">
+      <component id="d95a1" class="javax.swing.JButton" binding="listCompany">
         <constraints>
           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -32,7 +24,7 @@
           <text value="Listar todas as Empresas"/>
         </properties>
       </component>
-      <component id="15941" class="javax.swing.JButton" binding="postCompany">
+      <component id="73c91" class="javax.swing.JButton" binding="postCompany">
         <constraints>
           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -40,7 +32,7 @@
           <text value="Adicionar uma nova Empresa"/>
         </properties>
       </component>
-      <component id="67832" class="javax.swing.JButton" binding="updateCompany">
+      <component id="e579" class="javax.swing.JButton" binding="updateCompany">
         <constraints>
           <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -48,27 +40,35 @@
           <text value="Atualizar uma Empresa"/>
         </properties>
       </component>
-      <vspacer id="50858">
+      <component id="58ddf" class="javax.swing.JButton" binding="deleteCompany">
         <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
-      </vspacer>
-      <vspacer id="c86af">
-        <constraints>
-          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-        </constraints>
-      </vspacer>
-      <vspacer id="cf6c7">
+        <properties>
+          <text value="Deletar uma Empresa"/>
+        </properties>
+      </component>
+      <vspacer id="60bb1">
         <constraints>
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
-      <hspacer id="57777">
+      <vspacer id="48eae">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="21a9a">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <hspacer id="69970">
         <constraints>
           <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
       </hspacer>
-      <hspacer id="a1a12">
+      <hspacer id="9e4d7">
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>

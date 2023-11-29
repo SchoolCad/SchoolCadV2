@@ -1,6 +1,7 @@
 package controllers;
 
-import views.*;
+import views.MenuPrincipal;
+
 public class Main {
 
     public static void main(String[] args) {

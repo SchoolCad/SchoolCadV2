@@ -8,20 +8,20 @@
     <properties/>
     <border type="none"/>
     <children>
-      <scrollpane id="9661d">
+      <scrollpane id="bc872">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
         <border type="none"/>
         <children>
-          <component id="93090" class="javax.swing.JTable" binding="table">
+          <component id="e37bf" class="javax.swing.JTable" binding="table">
             <constraints/>
             <properties/>
           </component>
         </children>
       </scrollpane>
-      <component id="71d4f" class="javax.swing.JButton" binding="back">
+      <component id="eb88c" class="javax.swing.JButton" binding="back">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>

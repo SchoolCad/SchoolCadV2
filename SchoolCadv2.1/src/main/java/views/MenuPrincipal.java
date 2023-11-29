@@ -1,5 +1,7 @@
 package views;
 
+import views.Professor.MenuProfessor;
+import views.aluno.MenuAluno;
 import views.empresa.MenuEmpresa;
 import views.turma.MenuTurma;
 
@@ -53,9 +55,9 @@ public class MenuPrincipal extends JFrame {
         professorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //new MenuProfessor;
+                new MenuProfessor();
 
-                //dispose();
+                dispose();
             }
         });
     }
