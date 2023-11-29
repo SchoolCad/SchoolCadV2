@@ -1,4 +1,4 @@
-package views;
+package views.empresa;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -17,7 +17,7 @@ public class MenuEmpresa extends JFrame{
         setTitle("Menu Empresa");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(1280,720);
+        setSize(300,300);
         setLocationRelativeTo(null);
         setVisible(true);
         listCompany.addActionListener(new ActionListener() {

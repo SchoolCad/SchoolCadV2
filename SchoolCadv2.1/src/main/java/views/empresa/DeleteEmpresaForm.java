@@ -1,4 +1,4 @@
-package views;
+package views.empresa;
 
 import models.DatabaseSingleton;
 import models.Empresa;
@@ -23,7 +23,7 @@ public class DeleteEmpresaForm extends JFrame{
         setContentPane(DeleteEmpresaForm);
         setTitle("Excluir Empresa");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(1280,720);
+        setSize(300,300);
         setLocationRelativeTo(null);
 
         idLabel.setText("" + initialValues.getId());

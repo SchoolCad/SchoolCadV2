@@ -1,4 +1,4 @@
-package views;
+package views.empresa;
 
 import models.DatabaseSingleton;
 import models.Empresa;
@@ -45,7 +45,7 @@ public class UpdateEmpresaForm extends  JFrame{
         setContentPane(UpdateEmpresaForm);
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(1280,720);
+        setSize(300,300);
         setLocationRelativeTo(null);
 
         nomeField.setText(initialValues.getNome());
