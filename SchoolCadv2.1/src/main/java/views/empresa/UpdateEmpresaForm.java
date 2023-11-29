@@ -121,7 +121,7 @@ public class UpdateEmpresaForm extends  JFrame{
         returnToMenu.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setVisible(false);
+               dispose();
                 new UpdateEmpresaTable(true);
             }
         });
@@ -133,7 +133,7 @@ public class UpdateEmpresaForm extends  JFrame{
 
     // Método para redirecionar para o MenuEmpresa
     private void redirecionarParaMenuEmpresa() {
-        setVisible(false);
+       dispose();
         new MenuEmpresa();
     }
     private boolean isCnpjValido(String cnpj) {

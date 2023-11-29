@@ -96,7 +96,7 @@ public class UpdateAlunoForm extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new MenuAluno();
-                setVisible(false);
+               dispose();
             }
         });
 
@@ -109,7 +109,7 @@ public class UpdateAlunoForm extends JFrame {
                         getKeyByValue(classroomMap, (String) classroom.getSelectedItem()),
                         getKeyByValue(internshipMap, (String)internship.getSelectedItem())
                 );
-                setVisible(false);
+               dispose();
                 new UpdateAlunoList();
             }
         });

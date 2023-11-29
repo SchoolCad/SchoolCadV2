@@ -25,7 +25,7 @@ public class MenuAluno extends JFrame {
         list.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setVisible(false);
+               dispose();
 
                 new ListAluno();
             }
@@ -33,7 +33,7 @@ public class MenuAluno extends JFrame {
         add.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setVisible(false);
+               dispose();
 
                 new CreateAluno();
             }
@@ -41,7 +41,7 @@ public class MenuAluno extends JFrame {
         update.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setVisible(false);
+               dispose();
 
                 new UpdateAlunoList();
             }
@@ -50,7 +50,7 @@ public class MenuAluno extends JFrame {
         delete.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setVisible(false);
+               dispose();
 
                 new DeleteAluno();
             }

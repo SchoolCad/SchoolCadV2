@@ -65,7 +65,7 @@ public class ListEmpresas extends JFrame{
         });
     }
     private void redirecionarParaMenuEmpresa() {
-        setVisible(false);
+       dispose();
         new MenuEmpresa();
     }
 }

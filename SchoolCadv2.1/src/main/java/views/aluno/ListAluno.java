@@ -67,7 +67,7 @@ public class ListAluno extends JFrame {
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setVisible(false);
+               dispose();
 
                 new MenuAluno();
             }

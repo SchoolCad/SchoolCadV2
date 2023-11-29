@@ -88,7 +88,7 @@ public class UpdateEmpresaTable extends JFrame{
         selectCompany.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setVisible(false);
+               dispose();
 
                 if(isUpdate) {
                     new UpdateEmpresaForm(initialValues);
@@ -102,7 +102,7 @@ public class UpdateEmpresaTable extends JFrame{
     }
 
     private void redirecionarParaMenuEmpresa() {
-        setVisible(false);
+       dispose();
         new MenuEmpresa();
     }
 }

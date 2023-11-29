@@ -107,7 +107,7 @@ public class CreateAluno extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new MenuAluno();
-                setVisible(false);
+               dispose();
             }
         });
 

@@ -71,7 +71,7 @@ public class UpdateAlunoList extends JFrame {
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setVisible(false);
+               dispose();
 
                 new MenuAluno();
             }
@@ -93,7 +93,7 @@ public class UpdateAlunoList extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Aluno selectedAluno = listaAlunos.get(table.getSelectedRow());
 
-                setVisible(false);
+               dispose();
                 new UpdateAlunoForm(selectedAluno);
             }
         });

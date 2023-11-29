@@ -103,7 +103,7 @@ public class CadastrarEmpresa extends JFrame{
 
     // Método para redirecionar para o MenuEmpresa
     private void redirecionarParaMenuEmpresa() {
-        setVisible(false);
+       dispose();
         new MenuEmpresa();
     }
 

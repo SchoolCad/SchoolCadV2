@@ -32,7 +32,7 @@ public class DeleteAluno extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 new MenuAluno();
-                setVisible(false);
+               dispose();
             }
         });
 
@@ -54,7 +54,7 @@ public class DeleteAluno extends JFrame{
                     int delete = singleton.executeDML(String.format("DELETE FROM aluno WHERE registro='%s'", comboBox.getSelectedItem()));
 
                     JOptionPane.showMessageDialog(null, String.format("Aluno de registro %s excluído com sucesso!", comboBox.getSelectedItem()), "Excluir", 2);
-                    setVisible(false);
+                   dispose();
 
                     new MenuAluno();
                 } catch (Exception err) {

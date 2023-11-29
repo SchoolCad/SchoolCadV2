@@ -23,7 +23,7 @@ public class MenuEmpresa extends JFrame{
         listCompany.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setVisible(false);
+               dispose();
 
                 new ListEmpresas();
             }
@@ -31,7 +31,7 @@ public class MenuEmpresa extends JFrame{
         postCompany.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setVisible(false);
+               dispose();
 
                 new CadastrarEmpresa();
             }
@@ -39,7 +39,7 @@ public class MenuEmpresa extends JFrame{
         updateCompany.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setVisible(false);
+               dispose();
 
                 new UpdateEmpresaTable(true);
             }
@@ -47,7 +47,7 @@ public class MenuEmpresa extends JFrame{
         deleteCompany.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setVisible(false);
+               dispose();
 
                 new UpdateEmpresaTable(false);
             }
