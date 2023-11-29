@@ -1,0 +1,14 @@
+https://github.com/SchoolCad/SchoolCadV2.git
+
+Olá professor!
+Primeiro de td gostariamos de te agradecer por td que vc fez no ano, conseguimos aprender java bonitinho :))
+
+Segue o nosso projetinho, fizemos ele no IntelliJ, então de preferencia rode ele no IntelliJ
+Para rodar ele basta adicionar um modulo do projeto do conector do MySQL e executar a Main.java 
+Garante de mudar as credenciais no DatabaseSingleton
+Mandei alguns links sobre essa configuração do IntelliJ
+(tentamos criar um "compilavel" myApp.jar para facilitar seu trabalho, com entrada de credenciais do banco e td mas não rolou)
+Bom fim de ano!! Obg pelos ensinamentos!!
+
+https://www.youtube.com/watch?v=T5Hey0e2Y_g
+https://www.youtube.com/watch?v=V2bGKzvMQyc
