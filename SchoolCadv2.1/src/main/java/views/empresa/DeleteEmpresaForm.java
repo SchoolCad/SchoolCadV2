@@ -23,7 +23,7 @@ public class DeleteEmpresaForm extends JFrame{
         setContentPane(DeleteEmpresaForm);
         setTitle("Excluir Empresa");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(300,300);
+        setSize(1280,720);
         setLocationRelativeTo(null);
 
         idLabel.setText("" + initialValues.getId());

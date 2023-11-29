@@ -40,11 +40,9 @@ public class UpdateTurma extends JFrame{
 
         setContentPane(UpdateTurma);
         setLocationRelativeTo(null);
-        setSize(300, 300);
-        setMinimumSize(new Dimension(300, 300));
-        setVisible(true);
-
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize(1280,720);
+        setVisible(true);
 
         DocumentListener listenerList = new DocumentListener() {
             @Override

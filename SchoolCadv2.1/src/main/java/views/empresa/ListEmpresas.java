@@ -22,7 +22,7 @@ public class ListEmpresas extends JFrame{
         setTitle("Lista de Empresas");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(300,300);
+        setSize(1280,720);
         setLocationRelativeTo(null);
         setVisible(true);
 

@@ -17,15 +17,13 @@ import java.awt.event.ActionListener;
      private JButton backBtn;
 
      public MenuTurma(){
-        setTitle("Menu das turmas");
+        setTitle("Menu turmas");
 
         setContentPane(MenuTurm);
         setLocationRelativeTo(null);
-        setSize(300, 300);
-        setMinimumSize(new Dimension(300,300));
-        setVisible(true);
-
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize(1280,720);
+        setVisible(true);
 
         createTurmaBtn.addActionListener(new ActionListener() {
             @Override

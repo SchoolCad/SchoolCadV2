@@ -1,5 +1,7 @@
 package views.aluno;
 
+import views.MenuPrincipal;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,6 +14,7 @@ public class MenuAluno extends JFrame {
     private JButton add;
     private JButton update;
     private JButton delete;
+    private JButton back;
 
     public MenuAluno() {
         setContentPane(MenuAluno);
@@ -56,5 +59,13 @@ public class MenuAluno extends JFrame {
             }
         });
 
+        back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+
+                new MenuPrincipal();
+            }
+        });
     }
 }

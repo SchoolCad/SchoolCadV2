@@ -1,6 +1,6 @@
 package views.Professor;
 
-import views.Professor.CreateProfessor;
+import views.MenuPrincipal;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -12,6 +12,7 @@ public class MenuProfessor extends JFrame {
     private JButton update;
     private JButton delete;
     private JPanel MenuProfessor;
+    private JButton back;
 
     public MenuProfessor() {
 
@@ -53,6 +54,14 @@ public class MenuProfessor extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 new DeleteProfessor();
+            }
+        });
+        back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+
+                new MenuPrincipal();
             }
         });
     }

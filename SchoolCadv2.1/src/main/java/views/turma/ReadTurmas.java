@@ -21,11 +21,9 @@ public class ReadTurmas extends JFrame{
 
         setContentPane(ReadTurmas);
         setLocationRelativeTo(null);
-        setSize(300, 300);
-        setMinimumSize(new Dimension(300, 300));
-        setVisible(true);
-
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize(1280,720);
+        setVisible(true);
 
         try {
             DatabaseSingleton singleton = DatabaseSingleton.getInstance();

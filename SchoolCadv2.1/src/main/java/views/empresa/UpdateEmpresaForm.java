@@ -44,8 +44,9 @@ public class UpdateEmpresaForm extends  JFrame{
         setTitle("Atualizar Empresa");
         setContentPane(UpdateEmpresaForm);
 
+
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(300,300);
+        setSize(1280,720);
         setLocationRelativeTo(null);
 
         nomeField.setText(initialValues.getNome());

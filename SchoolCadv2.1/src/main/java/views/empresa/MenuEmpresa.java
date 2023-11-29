@@ -1,5 +1,7 @@
 package views.empresa;
 
+import views.MenuPrincipal;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,13 +13,14 @@ public class MenuEmpresa extends JFrame{
     private JButton postCompany;
     private JButton updateCompany;
     private JPanel MenuEmpresa;
+    private JButton back;
 
     public MenuEmpresa() {
         setContentPane(MenuEmpresa);
         setTitle("Menu Empresa");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(300,300);
+        setSize(1280,720);
         setLocationRelativeTo(null);
         setVisible(true);
         listCompany.addActionListener(new ActionListener() {
@@ -50,6 +53,14 @@ public class MenuEmpresa extends JFrame{
                dispose();
 
                 new UpdateEmpresaTable(false);
+            }
+        });
+        back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+
+                new MenuPrincipal();
             }
         });
     }

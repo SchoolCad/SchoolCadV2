@@ -18,15 +18,13 @@ public class MenuPrincipal extends JFrame {
     private JButton empresaButton;
 
     public MenuPrincipal () {
-        setTitle("Menu das turmas");
+        setTitle("Menu Principal");
 
         setContentPane(MenuPrincipalPane);
         setLocationRelativeTo(null);
-        setSize(300, 300);
-        setMinimumSize(new Dimension(300,300));
-        setVisible(true);
-
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize(1280,720);
+        setVisible(true);
 
         turmaButton.addActionListener(new ActionListener() {
             @Override

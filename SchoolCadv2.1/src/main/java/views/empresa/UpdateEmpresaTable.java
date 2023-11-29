@@ -24,7 +24,7 @@ public class UpdateEmpresaTable extends JFrame{
         setTitle("Selecionar Empresa");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(300,300);
+        setSize(1280,720);
         setLocationRelativeTo(null);
 
         if(!isUpdate) {
