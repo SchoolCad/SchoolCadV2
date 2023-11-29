@@ -39,9 +39,10 @@ public class UpdateTurma extends JFrame{
         setTitle("Atualizar turma");
 
         setContentPane(UpdateTurma);
-        setLocationRelativeTo(null);
+
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280,720);
+        setLocationRelativeTo(null);
         setVisible(true);
 
         DocumentListener listenerList = new DocumentListener() {

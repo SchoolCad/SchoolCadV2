@@ -20,11 +20,11 @@ import java.awt.event.ActionListener;
         setTitle("Menu turmas");
 
         setContentPane(MenuTurm);
-        setLocationRelativeTo(null);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(1280,720);
-        setVisible(true);
 
+         setDefaultCloseOperation(EXIT_ON_CLOSE);
+         setSize(1280,720);
+         setLocationRelativeTo(null);
+         setVisible(true);
         createTurmaBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

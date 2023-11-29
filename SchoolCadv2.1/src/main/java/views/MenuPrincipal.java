@@ -21,9 +21,9 @@ public class MenuPrincipal extends JFrame {
         setTitle("Menu Principal");
 
         setContentPane(MenuPrincipalPane);
-        setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280,720);
+        setLocationRelativeTo(null);
         setVisible(true);
 
         turmaButton.addActionListener(new ActionListener() {

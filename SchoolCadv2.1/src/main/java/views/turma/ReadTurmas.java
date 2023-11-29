@@ -20,9 +20,10 @@ public class ReadTurmas extends JFrame{
         setTitle("Listar turmas");
 
         setContentPane(ReadTurmas);
-        setLocationRelativeTo(null);
+
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280,720);
+        setLocationRelativeTo(null);
         setVisible(true);
 
         try {

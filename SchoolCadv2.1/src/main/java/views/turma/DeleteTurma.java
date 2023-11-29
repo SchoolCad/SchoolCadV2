@@ -33,9 +33,10 @@ public class DeleteTurma extends JFrame{
         setTitle("Cadastrar turma");
 
         setContentPane(DeleteTurma);
-        setLocationRelativeTo(null);
+
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280,720);
+        setLocationRelativeTo(null);
         setVisible(true);
 
         DocumentListener listenerList = new DocumentListener() {
