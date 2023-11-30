@@ -36,11 +36,6 @@ public class UpdateEmpresaForm extends  JFrame{
         updateButton.setEnabled(fieldsCompleted);
     }
     public UpdateEmpresaForm(Empresa initialValues) {
-        //System.out.println(initialValues.getId());
-        //System.out.println(initialValues.getNome());
-        //System.out.println(initialValues.getRegistro());
-        //System.out.println(initialValues.getArea());
-
         setTitle("Atualizar Empresa");
         setContentPane(UpdateEmpresaFormPane);
 

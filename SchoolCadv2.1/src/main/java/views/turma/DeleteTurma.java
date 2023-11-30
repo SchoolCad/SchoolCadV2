@@ -81,6 +81,17 @@ public class DeleteTurma extends JFrame{
                             } else {
                                 JOptionPane.showMessageDialog(null, "Não haviam alunos na turma deletada.");
                             }
+
+                            sql = "UPDATE professor SET id_turma = null WHERE id_turma = ?";
+                            preparedStatement = singleton.getConnection().prepareStatement(sql);
+
+                            preparedStatement.setInt(1, Integer.parseInt(IdInput.getText()));
+
+                            if (preparedStatement.executeUpdate() > 0) {
+                                JOptionPane.showMessageDialog(null, "Os dados dos professores com as turmas deletadas foram atualizados.");
+                            } else {
+                                JOptionPane.showMessageDialog(null, "Não haviam professores na turma deletada.");
+                            }
                         } else {
                             JOptionPane.showMessageDialog(null, "Não foi possível deletar a turma :(");
                         }
