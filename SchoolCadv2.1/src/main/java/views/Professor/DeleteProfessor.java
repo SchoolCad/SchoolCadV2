@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class DeleteProfessor extends JFrame {
     private JTable table;
-    private JPanel DeleteProfessor;
+    private JPanel DeleteProfessorPane;
     private JButton delete;
     private JButton back;
 
@@ -35,7 +35,7 @@ public class DeleteProfessor extends JFrame {
     }
 
     public DeleteProfessor () {
-        setContentPane(DeleteProfessor);
+        setContentPane(DeleteProfessorPane);
         setTitle("Atualizar Professores");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);

@@ -12,11 +12,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.List;
 
 public class UpdateProfessorList extends JFrame {
     private JTable table;
-    private JPanel UpdateProfessorList;
+    private JPanel UpdateProfessorListPane;
     private JButton update;
     private JButton back;
 
@@ -36,7 +35,7 @@ public class UpdateProfessorList extends JFrame {
     }
 
     public UpdateProfessorList () {
-        setContentPane(UpdateProfessorList);
+        setContentPane(UpdateProfessorListPane);
         setTitle("Atualizar Professores");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);

@@ -23,7 +23,7 @@ public class UpdateProfessorForm extends JFrame {
     private JLabel labelregistry;
     private JLabel labelsubject;
     private JComboBox classroom;
-    private JPanel UpdateProfessorForm;
+    private JPanel UpdateProfessorFormPane;
 
     private boolean checkForms () {
         boolean x = isRegistryValid() && !name.getText().isEmpty() &&
@@ -69,7 +69,7 @@ public class UpdateProfessorForm extends JFrame {
     }
 
     public UpdateProfessorForm (Professor professor) {
-        setContentPane(UpdateProfessorForm);
+        setContentPane(UpdateProfessorFormPane);
         setTitle("Atualizar Professor");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);

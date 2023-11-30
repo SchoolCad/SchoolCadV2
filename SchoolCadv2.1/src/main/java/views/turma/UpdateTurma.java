@@ -5,14 +5,13 @@ import models.DatabaseSingleton;
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class UpdateTurma extends JFrame{
-    private JPanel UpdateTurma;
+    private JPanel UpdateTurmaPane;
     private JTextField IdInput;
     private JButton UpdateBtn;
     private JButton CancelBtn;
@@ -38,7 +37,7 @@ public class UpdateTurma extends JFrame{
 
         setTitle("Atualizar turma");
 
-        setContentPane(UpdateTurma);
+        setContentPane(UpdateTurmaPane);
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280,720);

@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class UpdateAlunoForm extends JFrame {
 
-    private JPanel UpdateAluno;
+    private JPanel UpdateAlunoPane;
     private JLabel labelName;
     private JLabel registryLabel;
     private JTextField registry;
@@ -27,7 +27,7 @@ public class UpdateAlunoForm extends JFrame {
 
     public UpdateAlunoForm(Aluno alunoValues){
 
-        setContentPane(UpdateAluno);
+        setContentPane(UpdateAlunoPane);
         setTitle("Atualizar Aluno");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280,720);

@@ -11,12 +11,12 @@ public class MenuProfessor extends JFrame {
     private JButton add;
     private JButton update;
     private JButton delete;
-    private JPanel MenuProfessor;
+    private JPanel MenuProfessorPane;
     private JButton back;
 
     public MenuProfessor() {
 
-        setContentPane(MenuProfessor);
+        setContentPane(MenuProfessorPane);
         setTitle("Menu Professor");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);

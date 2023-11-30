@@ -16,11 +16,11 @@ public class DeleteEmpresaForm extends JFrame{
     private JLabel nomeLabel;
     private JLabel registroLabel;
     private JLabel areaLabel;
-    private JPanel DeleteEmpresaForm;
+    private JPanel DeleteEmpresaFormPane;
     private JButton returnToMenu;
 
     public DeleteEmpresaForm(Empresa initialValues) {
-        setContentPane(DeleteEmpresaForm);
+        setContentPane(DeleteEmpresaFormPane);
         setTitle("Excluir Empresa");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280,720);

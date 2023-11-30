@@ -4,13 +4,12 @@ import adapters.TableAdapter;
 import models.DatabaseSingleton;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 
 public class ReadTurmas extends JFrame{
-    private JPanel ReadTurmas;
+    private JPanel ReadTurmasPane;
     private JLabel pageTitle;
     private JButton backBtn;
     private JTable turmaTable;
@@ -19,7 +18,7 @@ public class ReadTurmas extends JFrame{
     public ReadTurmas(){
         setTitle("Listar turmas");
 
-        setContentPane(ReadTurmas);
+        setContentPane(ReadTurmasPane);
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280,720);

@@ -12,7 +12,7 @@ import java.sql.SQLException;
 
 public class CadastrarEmpresa extends JFrame{
     private JLabel titleCadastrar;
-    private JPanel CadastrarEmpresa;
+    private JPanel CadastrarEmpresaPane;
     private JTextField nomeField;
     private JTextField registroField;
     private JTextField areaField;
@@ -28,7 +28,7 @@ public class CadastrarEmpresa extends JFrame{
         submitButton.setEnabled(fieldsCompleted);
     }
     public CadastrarEmpresa() {
-        setContentPane(CadastrarEmpresa);
+        setContentPane(CadastrarEmpresaPane);
         setTitle("Cadastro de Empresa");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280,720);

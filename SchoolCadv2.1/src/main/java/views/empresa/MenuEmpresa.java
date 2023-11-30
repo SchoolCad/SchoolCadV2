@@ -12,11 +12,11 @@ public class MenuEmpresa extends JFrame{
     private JButton listCompany;
     private JButton postCompany;
     private JButton updateCompany;
-    private JPanel MenuEmpresa;
+    private JPanel MenuEmpresaPane;
     private JButton back;
 
     public MenuEmpresa() {
-        setContentPane(MenuEmpresa);
+        setContentPane(MenuEmpresaPane);
         setTitle("Menu Empresa");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);

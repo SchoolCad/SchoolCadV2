@@ -12,13 +12,13 @@ import java.sql.ResultSet;
 public class ListEmpresas extends JFrame{
     private JLabel titleList;
     private JTable tableList;
-    private JPanel ListEmpresas;
+    private JPanel ListEmpresasPane;
     private JButton returnToMenu;
 
     private TableAdapter tableModel;
 
     public ListEmpresas() {
-        setContentPane(ListEmpresas);
+        setContentPane(ListEmpresasPane);
         setTitle("Lista de Empresas");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);

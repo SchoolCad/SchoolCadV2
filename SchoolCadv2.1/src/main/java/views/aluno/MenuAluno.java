@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 
 public class MenuAluno extends JFrame {
 
-    private JPanel MenuAluno;
+    private JPanel MenuAlunoPane;
     private JLabel options;
     private JButton list;
     private JButton add;
@@ -17,7 +17,7 @@ public class MenuAluno extends JFrame {
     private JButton back;
 
     public MenuAluno() {
-        setContentPane(MenuAluno);
+        setContentPane(MenuAlunoPane);
         setTitle("Menu Aluno");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);

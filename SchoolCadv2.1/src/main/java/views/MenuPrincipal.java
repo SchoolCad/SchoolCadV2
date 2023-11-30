@@ -6,12 +6,11 @@ import views.empresa.MenuEmpresa;
 import views.turma.MenuTurma;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MenuPrincipal extends JFrame {
-    private JPanel MenuPrincipalPane;
+    private JPanel MenuPrincipal;
     private JButton alunoButton;
     private JButton professorButton;
     private JButton turmaButton;
@@ -20,7 +19,7 @@ public class MenuPrincipal extends JFrame {
     public MenuPrincipal () {
         setTitle("Menu Principal");
 
-        setContentPane(MenuPrincipalPane);
+        setContentPane(MenuPrincipal);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280,720);
         setLocationRelativeTo(null);

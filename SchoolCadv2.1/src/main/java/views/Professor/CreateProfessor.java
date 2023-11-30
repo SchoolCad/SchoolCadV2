@@ -24,7 +24,7 @@ public class CreateProfessor extends JFrame {
     private JLabel labelsubject;
     private JLabel labelclass;
     private JButton back;
-    private JPanel CreateProfessor;
+    private JPanel CreateProfessorPane;
 
     private boolean checkForms () {
         boolean x = isRegistryValid() && !name.getText().isEmpty() &&
@@ -70,7 +70,7 @@ public class CreateProfessor extends JFrame {
     }
 
     public CreateProfessor () {
-        setContentPane(CreateProfessor);
+        setContentPane(CreateProfessorPane);
         setTitle("Cadastro de Professor");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);

@@ -14,7 +14,7 @@ import java.util.List;
 
 public class ListProfessor extends JFrame {
     private JTable table;
-    private JPanel ListProfessor;
+    private JPanel ListProfessorPane;
     private JButton back;
     private TableAdapter tableModel;
 
@@ -30,7 +30,7 @@ public class ListProfessor extends JFrame {
     }
 
     public ListProfessor () {
-        setContentPane(ListProfessor);
+        setContentPane(ListProfessorPane);
         setTitle("Lista de Professores");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);

@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 
 public class UpdateEmpresaTable extends JFrame{
     private JTable tableList;
-    private JPanel UpdateEmpresaTable;
+    private JPanel UpdateEmpresaTablePane;
     private JButton returnToMenu;
     private JButton selectCompany;
 
@@ -20,7 +20,7 @@ public class UpdateEmpresaTable extends JFrame{
     private Empresa initialValues;
 
     public UpdateEmpresaTable(boolean isUpdate) {
-        setContentPane(UpdateEmpresaTable);
+        setContentPane(UpdateEmpresaTablePane);
         setTitle("Selecionar Empresa");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);

@@ -1,19 +1,17 @@
 package views.turma;
 
-import controllers.Turma;
 import models.DatabaseSingleton;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class CreateTurma extends JFrame {
-    private JPanel CreateTurma;
+    private JPanel CreateTurmaPane;
     private JTextField anoInput;
     private JTextField codeInput;
     private JButton saveBtn;
@@ -39,7 +37,7 @@ public class CreateTurma extends JFrame {
     public CreateTurma(){
         setTitle("Cadastrar turma");
 
-        setContentPane(CreateTurma);
+        setContentPane(CreateTurmaPane);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280,720);
         setLocationRelativeTo(null);

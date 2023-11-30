@@ -18,7 +18,7 @@ public class UpdateEmpresaForm extends  JFrame{
     private JTextField areaField;
     private JButton returnToMenu;
     private JButton updateButton;
-    private JPanel UpdateEmpresaForm;
+    private JPanel UpdateEmpresaFormPane;
     private JButton clearButton;
 
     private void checkFields(Empresa initialValues) {
@@ -42,7 +42,7 @@ public class UpdateEmpresaForm extends  JFrame{
         //System.out.println(initialValues.getArea());
 
         setTitle("Atualizar Empresa");
-        setContentPane(UpdateEmpresaForm);
+        setContentPane(UpdateEmpresaFormPane);
 
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);

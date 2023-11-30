@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UpdateAlunoList extends JFrame {
-    private JPanel ListAluno;
+    private JPanel ListAlunoPane;
     private JTable table;
     private JButton edit;
     private JButton back;
@@ -23,7 +23,7 @@ public class UpdateAlunoList extends JFrame {
 
 
     public UpdateAlunoList() {
-        setContentPane(ListAluno);
+        setContentPane(ListAlunoPane);
         setTitle("Lista de Alunos para Editar");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);

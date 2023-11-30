@@ -10,14 +10,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DeleteAluno extends JFrame{
-    private JPanel DeleteAluno;
+    private JPanel DeleteAlunoPane;
     private JLabel deleteLabel;
     private JComboBox comboBox;
     private JButton delete;
     private JButton back;
 
     public DeleteAluno() {
-        setContentPane(DeleteAluno);
+        setContentPane(DeleteAlunoPane);
         setTitle("Deletar Aluno");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1280,720);

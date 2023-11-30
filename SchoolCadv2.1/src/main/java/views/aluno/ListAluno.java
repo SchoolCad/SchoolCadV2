@@ -13,14 +13,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListAluno extends JFrame {
-    private JPanel ListAluno;
+    private JPanel ListAlunoPane;
     private JTable table;
     private JButton back;
     private TableAdapter tableModel;
 
 
     public ListAluno() {
-        setContentPane(ListAluno);
+        setContentPane(ListAlunoPane);
         setTitle("Lista de Alunos");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);

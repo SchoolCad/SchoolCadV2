@@ -71,7 +71,7 @@ public class DeleteTurma extends JFrame{
                         if(preparedStatement.executeUpdate() > 0){
                             JOptionPane.showMessageDialog(null, "Turma deletada com sucesso!");
 
-                            sql = "UPDATE aluno SET id.turma = null WHERE id_turma = ?";
+                            sql = "UPDATE aluno SET id_turma = null WHERE id_turma = ?";
                             preparedStatement = singleton.getConnection().prepareStatement(sql);
 
                             preparedStatement.setInt(1, Integer.parseInt(IdInput.getText()));

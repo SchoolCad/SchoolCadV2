@@ -3,12 +3,11 @@
 import views.MenuPrincipal;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
  public class MenuTurma extends JFrame{
-    private JPanel MenuTurm;
+    private JPanel MenuTurma;
     private JButton createTurmaBtn;
     private JButton readTurmaBtn;
     private JButton updateTurmaBtn;
@@ -19,7 +18,7 @@ import java.awt.event.ActionListener;
      public MenuTurma(){
         setTitle("Menu turmas");
 
-        setContentPane(MenuTurm);
+        setContentPane(MenuTurma);
 
          setDefaultCloseOperation(EXIT_ON_CLOSE);
          setSize(1280,720);
